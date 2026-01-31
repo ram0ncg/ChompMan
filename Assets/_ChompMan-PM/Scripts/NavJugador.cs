@@ -26,7 +26,7 @@ public class NavJugador : MonoBehaviour
         float movimientoH = Input.GetAxis("Horizontal");
         float movimientoV = Input.GetAxis("Vertical");
 
-        Vector3 anguloTeclas = new Vector3(movimientoH, 0f, movimientoV);
+        Vector3 anguloTeclas = new Vector3(movimientoH, 0f, movimientoV).normalized;
         
         transform.Translate(anguloTeclas * velocidad * Time.deltaTime, Space.World);
 
@@ -56,6 +56,7 @@ public class NavJugador : MonoBehaviour
         }
         else if(other.tag == "Player")
         {
+            Debug.Log("X");
             gm.gameOver = true;
         }
     }

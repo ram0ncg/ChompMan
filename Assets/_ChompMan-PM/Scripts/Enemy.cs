@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
         defaultMaterial = GetComponent<MeshRenderer>().material;
         defaultPosition = gameObject.transform.position;
         agent = GetComponent<NavMeshAgent>();
-        baseVelocity = gameObject.name == "Ghost" ? 2f : 2.5f;
+        baseVelocity = gameObject.name == "Ghost" ? 2.2f : 2.7f;
     }
 
     // Update is called once per frame

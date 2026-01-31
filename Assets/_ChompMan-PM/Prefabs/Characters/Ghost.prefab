@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   chomp: {fileID: 0}
   deadMaterial: {fileID: 2100000, guid: c31e5fac1beb02f4e8774fb2e51e87a3, type: 2}
+  scaredGhost: 0
   deadGhost: 0
 --- !u!23 &6267910972916940959
 MeshRenderer:

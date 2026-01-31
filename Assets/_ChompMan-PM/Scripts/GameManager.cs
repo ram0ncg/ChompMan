@@ -1,7 +1,9 @@
 using System;
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -12,6 +14,9 @@ public class GameManager : MonoBehaviour
     private GameObject[] statistics;
     private TextMeshProUGUI[] stats;
     public bool gameOver;
+
+    public GameObject gameScreen;
+    public GameObject endScreen;
     void Start()
     {
         totalPoints = GameObject.FindGameObjectsWithTag("Point").Length;
@@ -47,18 +52,25 @@ public class GameManager : MonoBehaviour
         if (!gameOver || points > 0)
         {
             UpdateStats();
-        }
-        else
-        {
-            //GAMEOVER
+            if(points == 0)
+            {
+                SceneManager.LoadScene(1);
+            }
         }
     }
     public void EndScreen()
     {
+        if (gameOver)
+        {
 
+        }
+        else
+        {
+
+        }
     }
     public void RestartGame()
     {
-
+        SceneManager.LoadScene(0);
     }
 }
