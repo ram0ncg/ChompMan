@@ -8,6 +8,9 @@ TagManager:
   - MazeGeo
   - Point
   - Stats
+  - CherryPos
+  - EnemyPos
+  - Cherry
   layers:
   - Default
   - TransparentFX
