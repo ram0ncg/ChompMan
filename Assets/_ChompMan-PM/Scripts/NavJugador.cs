@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class NavJugador : MonoBehaviour
 {
-    public float velocidad = 3f;
+    public float velocidad = 4f;
+    public AudioClip munch;
+    public AudioClip eatFruit;
     private GameManager gm;
+    private AudioSource audioSource;
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        audioSource = gameObject.AddComponent<AudioSource>();   
     }
     void FixedUpdate()
     {
@@ -31,11 +35,15 @@ public class NavJugador : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Point") {
+            audioSource.clip = munch;
+            audioSource.Play();
             GameManager.points--;
             other.gameObject.SetActive(false);
         }
         else if(other.tag == "Cherry")
         {
+            audioSource.clip = eatFruit;
+            audioSource.Play();
             StartCoroutine(gm.CherryAction(other.gameObject));
         }
     }

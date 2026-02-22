@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_ChompMan-PM/Scenes/GameOver.unity
     guid: 468c1799c993a654891e0e04a19c465a
+  - enabled: 1
+    path: Assets/_ChompMan-PM/Scenes/MainMenu.unity
+    guid: 668de07601fafaa48a9e37e60ec9666e
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

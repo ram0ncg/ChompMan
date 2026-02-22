@@ -60,7 +60,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6bed19597475a274a834a0c10030ec22, type: 2}
+  - {fileID: 2100000, guid: 07a319e011269d640bd54c8681787d87, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -152,3 +152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   deadMaterial: {fileID: 2100000, guid: c31e5fac1beb02f4e8774fb2e51e87a3, type: 2}
+  dangerMaterial: {fileID: 2100000, guid: 6bed19597475a274a834a0c10030ec22, type: 2}
+  timeout: 0
+  scaredGhosts: 0

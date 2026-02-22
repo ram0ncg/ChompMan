@@ -152,3 +152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   deadMaterial: {fileID: 2100000, guid: c31e5fac1beb02f4e8774fb2e51e87a3, type: 2}
+  dangerMaterial: {fileID: 2100000, guid: 6bed19597475a274a834a0c10030ec22, type: 2}
+  timeout: 0
+  scaredGhosts: 0
