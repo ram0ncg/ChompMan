@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
                 {
                     //audioSource.clip = gm.scaredGhostsClip;
                     //audioSource.Play();
-                    velocity = GameManager.hardMode ? baseVelocity + 1f : baseVelocity - 0.5f;
+                    velocity = GameManager.hardMode ? baseVelocity + 0.2f : baseVelocity - 0.5f;
                     position = defaultPosition;
                 }
                 agent.speed = velocity;

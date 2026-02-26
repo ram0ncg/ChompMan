@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
                 if (hardMode)
                 {
                     audioSource.clip = hardModeMusic;
-                    timerCycle = 10;
+                    timerCycle = 11;
                 }
                 else
                 {
@@ -86,7 +86,8 @@ public class GameManager : MonoBehaviour
                     gameOverText.text = "YOU WIN!";
                 }
                 string diff = hardMode ? "Hard" : "Easy";
-                float score = ((totalPoints - points) * kills) - time;
+                float score = ((points / totalPoints) * 1000) + (kills * 100) - (time * 5);
+                score = Mathf.Max(0, score);
                 score = Mathf.RoundToInt(score);
                 recapText.text ="Total Score: " + score + "\nPoints: " + (totalPoints - points) + "\nKills: " + kills + "\nTime: " + TimeSpan.FromSeconds(time).ToString(@"mm\:ss\.ff")  + "\nDifficulty: " + diff;
                 break;
